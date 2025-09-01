@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<odoo>
+
+<menuitem id="trackfleet_menu" name="Track fleet">
+    <menuitem id="trackfleet_truck_menu_action" action="trackfleet_truck_action"/>
+    <menuitem id="trackfleet_delivery_menu_action" action="trackfleet_delivery_action"/>
+</menuitem>
+
+</odoo>

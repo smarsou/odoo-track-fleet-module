@@ -1,0 +1,71 @@
+<odoo>
+    <!-- Truck 1 -->
+    <record id="truck_demo_1" model="trackfleet.truck">
+        <field name="name">LU-1234</field>
+        <field name="capacity_t">18</field>
+        <field name="mileage">350000</field>
+        <field name="status">available</field>
+        <field name="last_maintenance_date">2025-01-15</field>
+        <field name="next_maintenance_date">2025-07-15</field>
+    </record>
+
+    <!-- Truck 2 -->
+    <record id="truck_demo_2" model="trackfleet.truck">
+        <field name="name">BE-5678</field>
+        <field name="capacity_t">25</field>
+        <field name="mileage">420000</field>
+        <field name="status">in_delivery</field>
+        <field name="last_maintenance_date">2024-12-10</field>
+        <field name="next_maintenance_date">2025-06-10</field>
+    </record>
+
+    <!-- Truck 3 -->
+    <record id="truck_demo_3" model="trackfleet.truck">
+        <field name="name">FR-9981</field>
+        <field name="capacity_t">12</field>
+        <field name="mileage">210000</field>
+        <field name="status">maintenance</field>
+        <field name="last_maintenance_date">2025-02-01</field>
+        <field name="next_maintenance_date">2025-08-01</field>
+    </record>
+
+    <!-- Truck 4 -->
+    <record id="truck_demo_4" model="trackfleet.truck">
+        <field name="name">LU-4455</field>
+        <field name="capacity_t">20</field>
+        <field name="mileage">500000</field>
+        <field name="status">available</field>
+        <field name="last_maintenance_date">2025-03-10</field>
+        <field name="next_maintenance_date">2025-09-10</field>
+    </record>
+
+    <!-- Truck 5 -->
+    <record id="truck_demo_5" model="trackfleet.truck">
+        <field name="name">DE-3344</field>
+        <field name="capacity_t">30</field>
+        <field name="mileage">650000</field>
+        <field name="status">maintenance</field>
+        <field name="last_maintenance_date">2024-11-20</field>
+        <field name="next_maintenance_date">2025-05-20</field>
+    </record>
+
+    <!-- Truck 6 -->
+    <record id="truck_demo_6" model="trackfleet.truck">
+        <field name="name">BE-7788</field>
+        <field name="capacity_t">16</field>
+        <field name="mileage">300000</field>
+        <field name="status">in_delivery</field>
+        <field name="last_maintenance_date">2025-01-05</field>
+        <field name="next_maintenance_date">2025-07-05</field>
+    </record>
+
+    <!-- Truck 7 -->
+    <record id="truck_demo_7" model="trackfleet.truck">
+        <field name="name">FR-5522</field>
+        <field name="capacity_t">22</field>
+        <field name="mileage">480000</field>
+        <field name="status">available</field>
+        <field name="last_maintenance_date">2025-02-20</field>
+        <field name="next_maintenance_date">2025-08-20</field>
+    </record>
+</odoo>

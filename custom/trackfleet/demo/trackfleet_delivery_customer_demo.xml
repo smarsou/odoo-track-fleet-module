@@ -1,0 +1,78 @@
+<odoo>
+    <!-- Clients de test -->
+    <record id="customer_1" model="res.partner">
+        <field name="name">DEMO Acme Corp</field>
+        <field name="country_id"/>
+    </record>
+
+    <record id="customer_2" model="res.partner">
+        <field name="name">DEMO Beta Ltd</field>
+        <field name="country_id"/>
+    </record>
+
+    <record id="customer_3" model="res.partner">
+        <field name="name">DEMO Gamma Inc</field>
+        <field name="country_id"/>
+    </record>
+
+    <record id="customer_4" model="res.partner">
+        <field name="name">DEMO Delta Co</field>
+        <field name="country_id"/>
+    </record>
+
+    <record id="customer_5" model="res.partner">
+        <field name="name">DEMO Epsilon GmbH</field>
+        <field name="country_id"/>
+    </record>
+
+    <!-- Deliveries -->
+    <record id="delivery_1" model="trackfleet.delivery">
+        <field name="truck_id" ref="truck_demo_1"/>
+        <field name="customer_id" ref="customer_1"/>
+        <field name="planned_date">2025-09-01 08:00:00</field>
+        <field name="status">scheduled</field>
+        <field name="destination_address">17, rue Edmond Reuter L-5326 Contern, Luxembourg</field>
+        <field name="weight_t">12.5</field>
+        <field name="notes">Handle with care</field>
+    </record>
+
+    <record id="delivery_2" model="trackfleet.delivery">
+        <field name="truck_id" ref="truck_demo_2"/>
+        <field name="customer_id" ref="customer_2"/>
+        <field name="planned_date">2025-09-01 09:00:00</field>
+        <field name="status">scheduled</field>
+        <field name="destination_address">13 Rue de la Libération, 5969 Itzig Hesperange, Luxembourg</field>
+        <field name="weight_t">18.0</field>
+        <field name="notes">Fragile</field>
+    </record>
+
+    <record id="delivery_3" model="trackfleet.delivery">
+        <!-- Même camion que delivery_1 -->
+        <field name="truck_id" ref="truck_demo_1"/>
+        <field name="customer_id" ref="customer_3"/>
+        <field name="planned_date">2025-09-01 10:30:00</field>
+        <field name="status">scheduled</field>
+        <field name="destination_address"> 193 Av. Paul Muller, 54600 Villers-lès-Nancy, France</field>
+        <field name="weight_t">10.0</field>
+        <field name="notes">Urgent delivery</field>
+    </record>
+
+    <record id="delivery_4" model="trackfleet.delivery">
+        <field name="truck_id" ref="truck_demo_3"/>
+        <field name="customer_id" ref="customer_4"/>
+        <field name="planned_date">2025-09-01 11:00:00</field>
+        <field name="status">scheduled</field>
+        <field name="destination_address">Rue des Bourlottes 9, 1367 Ramillies, Belgique</field>
+        <field name="weight_t">7.5</field>
+    </record>
+
+    <record id="delivery_5" model="trackfleet.delivery">
+        <field name="truck_id" ref="truck_demo_4"/>
+        <field name="customer_id" ref="customer_5"/>
+        <field name="planned_date">2025-09-01 12:30:00</field>
+        <field name="status">scheduled</field>
+        <field name="destination_address">Rue Paul Reuter 8, 6700 Arlon, Belgium</field>
+        <field name="weight_t">15.0</field>
+        <field name="notes">Keep refrigerated</field>
+    </record>
+</odoo>

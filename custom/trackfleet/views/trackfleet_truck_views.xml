@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <!-- <record id="trackfleet_truck_view_search" model="ir.ui.view">
+        <field name="name">trackfleet.truck.view.search</field>
+        <field name="model">trackfleet.truck</field>
+        <field name="arch" type="xml">
+            <search string="Search">
+                <field name="name"/>
+                <filter string="Include archived" name="archived" domain="['|', ('active', '=', True), ('active', '=', False)]"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
+            </search>
+        </field>
+    </record> -->
+
+    <record id="trackfleet_truck_view_form" model="ir.ui.view">
+        <field name="name">trackfleet.truck.form</field>
+        <field name="model">trackfleet.truck</field>
+        <field name="arch" type="xml">
+            <form string="Truck Information">
+                <sheet>
+                    <h1>Truck Information : <field name="name" readonly="1"/></h1>
+                    <br/>
+                    <group>
+                        <field name="name"/>
+                        <field name="driver_id"/>
+                        <field name="status"/>
+                        <field name="active"/>
+                        <field name="mileage"/>
+                        <field name="capacity_t"/>
+                    </group>
+                    <notebook>
+                        <page string="Maintenance">
+                            <field name="maintenance_due"/>
+                            <field name="last_maintenance_date"/>
+                            <field name="next_maintenance_date"/>
+                        </page>
+                        <page string="Deliveries">
+                            <field name="delivery_ids"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="trackfleet_truck_view_list" model="ir.ui.view">
+        <field name="name">trackfleet.truck.list</field>
+        <field name="model">trackfleet.truck</field>
+        <field name="arch" type="xml">
+            <list string="Trucks">
+                <field name="name"/>
+                <field name="status"/>
+                <field name="mileage"/>
+                <field name="maintenance_due"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="trackfleet_truck_action" model="ir.actions.act_window">
+        <field name="name">Trucks</field>
+        <field name="res_model">trackfleet.truck</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>
