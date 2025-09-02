@@ -16,7 +16,7 @@ class Delivery(models.Model):
         ("in_progress", "In Progress"),
         ("done", "Done"),
         ("canceled", "Canceled"),
-    ], string="Status", default="scheduled")
+    ], string="Status", default="scheduled", group_expand="_expand_groups")
 
     # Adresse (position géographique du client)
     destination_address = fields.Char("Destination Address", required=True)
@@ -27,6 +27,11 @@ class Delivery(models.Model):
     # Notes
     notes = fields.Text("Notes")
 
+
+    @api.model
+    def _expand_groups(self, states, domain):
+        return ['scheduled', 'in_progress', 'done', 'canceled']
+    
     # Gestion automatique de la référence
     # @api.model
     # def _compute_ref(self):
